@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex gap-4">
+  <section class="carousel-container">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+      {% for pic in property.pictures.all %}
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label=""></button>
+      {% endfor %}
+      </div>
+      <div class="carousel-inner">
+      {% for pic in property.pictures.all %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="image-container">
+            <img src="{{ pic.image.url }}" style="cursor: pointer;" class="img-fluid rounded-img custom-img" alt="" onclick="openImageWindow(this.src)">
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+</div>
+
+<h1>{{ property.title }}</h1>
+<p>{{ property.price }}{{ property.currency }}</p>
+<div>
+  {{ property.description }}
+</div>
+
+<div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+    </div>
+
+{% endblock content %}
+

@@ -1,0 +1,85 @@
+/* styles.css */
+.carousel-container {
+  max-width: 400px; /* Adjust the maximum width of the carousel as needed */
+  margin: 0; /* Reset margin */
+  padding: 20px 0; /* Add padding to create space between navbar and carousel */
+}
+
+.carousel-inner {
+  max-height: 300px; /* Adjust the maximum height of the carousel as needed */
+
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  top: 40%; /* Adjust the vertical position of the buttons */
+  position: absolute; /* Use absolute positioning for precise control */
+}
+
+.carousel-control-prev {
+  left: 0; /* Position the left button at the left edge of the container */
+  order: 1; /* Change the order to 1 to ensure it appears before the right button */
+}
+
+.carousel-control-next {
+  right: 0; /* Position the right button at the right edge of the container */
+  order: 2; /* Change the order to 2 to ensure it appears after the left button */
+}
+
+
+.carousel-inner .carousel-item {
+  transition: opacity 0.1s ease-in-out; /* Add a transition for opacity */
+}
+
+.carousel-inner .carousel-item.active {
+  opacity: 1; /* Ensure the active item is fully visible */
+}
+
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev,
+.carousel-inner .carousel-item.active {
+  display: block; /* Ensure the transitioning items are displayed */
+}
+
+.carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev {
+  position: absolute;
+  top: 0;
+  opacity: 0; /* Set the opacity to 0 for transitioning items */
+}
+
+/* Optional: Adjust z-index for better layering */
+.carousel-inner .carousel-item-prev {
+  z-index: 1;
+}
+.carousel-inner .carousel-item-next {
+  z-index: 0;
+}
+
+
+
+/* cards */
+.card {
+     width: 360px;
+     height: 450px;
+     margin-top: 20px;
+     transition: transform 0.2s;
+    }
+.card-img-top{
+     width: 360px;
+     height:270px;
+     }
+
+.card:hover {
+    transform: scale(1.1);
+
+
+
+body {
+    background-color: #f0f8ff; /* Very light blue color */
+  }

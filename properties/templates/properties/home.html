@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="home" class="home section-padding">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for property in properties %}
+  <div v-for="property in properties" class="col"><a href="{% url 'detail' slug=property.slug %}" style="text-decoration:none;">
+    <div class="card">
+      <img src="{{ property.image.url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ property.title }} </h5>
+        <p class="card-text">{{ property.location }}, {{ property.city }} <i class="bi bi-geo-alt-fill"></i></p>
+         <p class="card-text">{{ property.price }} {{ property.currency }}</p>
+      </div>
+    </div>
+    </a>
+  </div>
+    {% endfor %}
+</div>
+</section>
+
+
+
+{% endblock %}

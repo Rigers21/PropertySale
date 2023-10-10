@@ -1,0 +1,18 @@
+/* styles.css */
+.image-container {
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  overflow: hidden;
+}
+
+.img-fluid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rounded-img {
+  border-radius: 20px; /* Adjust the value to control the roundness */
+}
