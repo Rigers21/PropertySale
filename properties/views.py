@@ -36,3 +36,10 @@ def contact_us(request):
         'form': form
     })
 
+
+def about_us(request):
+    return render(request, 'properties/about_us.html')
+
+
+def services(request):
+    return render(request, 'properties/services.html')

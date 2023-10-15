@@ -20,19 +20,21 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{% url 'home' %}">Immobilien</a>
+    <a class="navbar-brand" href="{% url 'home' %}">DEDDA Immobilien</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mx-3">
+      <ul class="navbar-nav ms-auto mb-2 mg-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="{% url 'about-us' %}">About Us</a>
         </li>
           <li class="nav-item">
               <a class="nav-link" href="{% url 'contact-us' %}">Contact Us</a>
          </li>
-
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'services' %}">Services</a>
+          </li>
       </ul>
 
     </div>
@@ -52,21 +54,26 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h5 class="text-light">Contact Us</h5>
                 <p class="text-light">This is how you can reach us!</p>
-                <p class="text-light"><a href="mailto:collakurigers21@gmail.com" class="mailto" data-extlink><i class="bi bi-envelope">collakurigers21@gmail.com</i></a></p>
-                <p class="text-light"><a href="tel:+355694473129"><i class="bi bi-telephone">+355 69 44 73 129</i></a></p>
-                <p class="text-light"><a href="https://wa.me/355694473129" class="ext"><i class="bi bi-whatsapp">+355 69 44 73 129</i></a></p>
+                <p class="text-light"><a href="mailto:info@dedda-immobilien.de" class="mailto" data-extlink><i class="bi bi-envelope">info@dedda-immobilien.de</i></a></p>
+                <p class="text-light"><a href="tel:07131 642 239-0"><i class="bi bi-telephone">07131 642 239-0</i></a></p>
+
             </div>
 
             <div class="col-lg-3">
                 <h5 class="text-light">Quick Links</h5>
                 <ul>
                     <li><p class="text-light"><a href="{% url 'home' %}">Home</a></p></li>
-                    <li><p class="text-light"><a href="#">About Us</a></p></li>
+                    <li><p class="text-light"><a href="{% url 'about-us' %}">About Us</a></p></li>
                     <li><p class="text-light"><a href="{% url 'contact-us' %}">Contact Us</a></p></li>
+                    <li><p class="text-light"><a href="{% url 'services' %}">Services</a></p></li>
                 </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="text-light">Our location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.084987430098!2d9.219240875405182!3d49.14201078070682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47982f41ac374d77%3A0xc4c33a6c2feb4d23!2sDEDDA%20Immobilien!5e0!3m2!1sen!2s!4v1697388320727!5m2!1sen!2s" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>

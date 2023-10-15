@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="about-us" class="about-us section-padding">
+    <div class="container">
+        <h2>DEDDA Immobilien</h2>
+        <p>Founded in 2007, DEDDA Immobilien is a testament to years of unwavering commitment to excellence in the industry.
+            With a strong foundation built on experience and dedication, we have evolved into a trusted partner for all your real estate needs.
+            Our mission is to provide top-notch service, combining market expertise with a personalized approach to help you find your dream home or maximize the value of your property investment.
+            We take pride in our deep-rooted connections within the community, and our seasoned team of professionals is here to guide you through every step of the real estate journey.
+            At our core, we believe in integrity, transparency, and a passion for real estate that drives us to continually exceed expectations.
+            Welcome to a world of endless possibilities with our real estate experts by your side.</p>
+        <div class="about-img">
+                    {% load static %}
+                    <img src="{% static 'images/Dedda-Immobilien-Buero.jpg' %}" class="img-fluid">
+                </div>
+        <br>
+        <div class="location">
+            <h5>Our location</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.084987430098!2d9.219240875405182!3d49.14201078070682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47982f41ac374d77%3A0xc4c33a6c2feb4d23!2sDEDDA%20Immobilien!5e0!3m2!1sen!2s!4v1697388320727!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock content %}
+
+
+
