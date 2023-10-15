@@ -82,7 +82,7 @@ msgstr ""
 
 #: .\properties\models.py:24
 msgid "description"
-msgstr ""
+msgstr "beschreibung"
 
 #: .\properties\models.py:25
 msgid "currency"

@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, HttpResponse
+from .forms import ContactForm
 from properties.models import Property, Picture
+from .models import Contact
 
 
 def home(request):
@@ -17,3 +18,21 @@ def detail(request, slug):
         'property': property,
         'images': images
     })
+
+
+def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            Contact.objects.create(name=name, email=email, message=message)
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'properties/contact_us.html', {
+        'form': form
+    })
+

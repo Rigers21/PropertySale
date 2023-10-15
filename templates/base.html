@@ -11,17 +11,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="{% static 'scripts/imagesscript.js' %}"></script>
 
+
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg mb-3" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{% url 'home' %}">Immobilien</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mx-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
@@ -29,14 +30,11 @@
           <a class="nav-link" href="#">About Us</a>
         </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="{% url 'contact-us' %}">Contact Us</a>
          </li>
 
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary"  type="submit">Search</button>
-      </form>
+
     </div>
   </div>
 </nav>
@@ -48,6 +46,33 @@
         {% block content %}{% endblock content %}
       </div>
     </main>
+
+
+<footer class="bg-dark bg-footer" style="margin-top: 80px;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6">
+                <h5 class="text-light">Contact Us</h5>
+                <p class="text-light">This is how you can reach us!</p>
+                <p class="text-light"><a href="mailto:collakurigers21@gmail.com" class="mailto" data-extlink><i class="bi bi-envelope">collakurigers21@gmail.com</i></a></p>
+                <p class="text-light"><a href="tel:+355694473129"><i class="bi bi-telephone">+355 69 44 73 129</i></a></p>
+                <p class="text-light"><a href="https://wa.me/355694473129" class="ext"><i class="bi bi-whatsapp">+355 69 44 73 129</i></a></p>
+            </div>
+
+            <div class="col-lg-3">
+                <h5 class="text-light">Quick Links</h5>
+                <ul>
+                    <li><p class="text-light"><a href="{% url 'home' %}">Home</a></p></li>
+                    <li><p class="text-light"><a href="#">About Us</a></p></li>
+                    <li><p class="text-light"><a href="{% url 'contact-us' %}">Contact Us</a></p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
 
 
 

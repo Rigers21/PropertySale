@@ -47,3 +47,14 @@ class Picture(models.Model):
         db_table = 'pictures'
         verbose_name = _('picture')
         verbose_name_plural = _('pictures')
+
+
+class Contact(models.Model):
+    name = models.CharField(_('name'), max_length=128, null=False)
+    email = models.EmailField(_('email'), max_length=128, null=False)
+    message = models.CharField(_('message'), max_length=528, null=False)
+
+    class Meta:
+        db_table = 'Contacts'
+        verbose_name = _('Contact')
+        verbose_name_plural = _('Contacts')

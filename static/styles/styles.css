@@ -77,9 +77,14 @@
 
 .card:hover {
     transform: scale(1.1);
+}
 
 
-
-body {
-    background-color: #f0f8ff; /* Very light blue color */
+.bg-footer{
+    background-color: #000;
+    padding: 50px 0 30px;
+}
+.text-light a {
+    color: white; /* Change to the desired lighter color code or color name */
+    text-decoration: none; /* Remove underline if needed */
   }
