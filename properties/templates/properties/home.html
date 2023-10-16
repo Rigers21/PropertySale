@@ -10,7 +10,9 @@
       <div class="card-body">
         <h5 class="card-title">{{ property.title }} </h5>
         <p class="card-text">{{ property.location }}, {{ property.city }} <i class="bi bi-geo-alt-fill"></i></p>
-         <p class="card-text">{{ property.price }} {{ property.currency }}</p>
+        <p class="card-text">Plot surface<i class="bi bi-bounding-box-circles"></i>: {{ property.plot_surface }}</p>
+        <p class="card-text">Construction surface<i class="bi bi-building"></i>: {{ property.construction_surface }}</p>
+         <p class="card-text">{{ property.price }}<i class="bi bi-currency-euro"></i></p>
       </div>
     </div>
     </a>
