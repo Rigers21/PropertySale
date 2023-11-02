@@ -4,6 +4,9 @@
 body{
     background: f1fbff;
 }
+.section-padding{
+    padding: 100px 0;
+}
 
 .navbar-nav a{
     font-size: 15px;
@@ -29,7 +32,6 @@ body{
 }
 
 
-
 /* cards */
 .card {
      width: 360px;
@@ -38,9 +40,15 @@ body{
      transition: transform 0.2s;
     }
 .card-img-top{
-     width: 360px;
-     height:270px;
+     width: 100%;
+     height: 250px;
      }
+
+
+.card-text {
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
 
 .card:hover {
     transform: scale(1.1);
@@ -58,13 +66,6 @@ body{
 .container-fluid {
     padding: 0;
 }
-#carouselExampleCaptions {
-  width: 100% !important;
-}
 
-.carousel-inner .carousel-item img {
-  width: 100% !important;
-
-}
 
 
