@@ -1,11 +1,37 @@
 *{
     font-family: montserrat;
 }
-body{
-    background: f1fbff;
+
+:root{
+    --h1-font: 5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1.1rem;
+
+    --bg-color: #6CDAEE;
+    --text-color: #ffffff;
+    --main-color: #1aa090;
+    --other-color: #d6d6d6;
 }
-.section-padding{
-    padding: 100px 0;
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.section{
+    padding: 100px 15% 70px;
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4.5rem;
+}
+.home-text h1{
+    font-size: var(--h1-font);
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .navbar-nav a{
