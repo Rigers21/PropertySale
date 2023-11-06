@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .forms import ContactForm
 from properties.models import Property, Picture
 from .models import Contact
